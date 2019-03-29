@@ -1,4 +1,6 @@
-# Proven-Unity-Timer
+
+# [**Proven Unity Timer**][2] 
+
 
 ---
 
@@ -129,3 +131,4 @@
 
 
   [1]: https://github.com/akbiggs/UnityTimer
+  [2]: https://github.com/asyncrun/Proven-Unity-Timer
