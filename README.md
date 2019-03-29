@@ -1,4 +1,3 @@
-
 # [**Proven Unity Timer**][2] 
 
 
@@ -20,7 +19,6 @@
  - 增加了流逝时间回调
  - 增加了倒计时回调
  - 增加了每帧回调
- - 优化了List删除Timer时，不发生List数组向前Copy数据操作
  - 测试代码中添加了：中途取消Timer、监听GameObject删除取消Timer、重连时取消、销毁时取消等容易发生错误的测试代码
 
 
@@ -116,7 +114,7 @@
             _printTipTimerId = Timer.Wait(3, PrintTip);
         }
     
-        public void WhenDeInt()
+        public void WhenDeInit()
         {
             Timer.Cancel(_countDownTimerId);
             Timer.Cancel(_printTipTimerId);

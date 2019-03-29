@@ -6,9 +6,7 @@ public class Main : MonoBehaviour
     {
         TimerManager.Self.OnUpdate(Time.deltaTime);
     }
-
-
-    //一些测试代码
+    
     private GameObject _obj;
     public long _countDownTimerId = 0;
     public long _printTipTimerId = 0;
@@ -88,7 +86,7 @@ public class Main : MonoBehaviour
         _printTipTimerId = Timer.Wait(3, PrintTip);
     }
 
-    public void WhenDeInt()
+    public void WhenDeInit()
     {
         Timer.Cancel(_countDownTimerId);
         Timer.Cancel(_printTipTimerId);
