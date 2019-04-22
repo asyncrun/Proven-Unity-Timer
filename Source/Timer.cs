@@ -16,7 +16,7 @@ public class Timer
     public bool IsCancelled { get;  set; }
     private bool _hasAutoDestroyOwner;
     
-    private static long _allocUseId = 0;
+    private static long _allocUseId = 1;
     public static long AllocUseId
     {
         get { return ++_allocUseId; }
