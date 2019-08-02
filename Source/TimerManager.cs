@@ -19,12 +19,19 @@ public class TimerManager : Singleton<TimerManager>
 
     public void OnUpdate(float deltaTime)
     {
+		RemoveTimer();
+		
         for (var i = _timers.Count - 1; i >= 0; i--)
         {
             _timers[i].OnUpdate(deltaTime);
         }
 
-        for (var i = _timers.Count - 1; i >= 0; i--)
+        RemoveTimer();
+    }
+	
+	public void RemoveTimer()
+	{
+		for (var i = _timers.Count - 1; i >= 0; i--)
         {
             var timer = _timers[i];
             if (timer.IsCancelled)
@@ -34,7 +41,7 @@ public class TimerManager : Singleton<TimerManager>
                 _objectPool.Release(timer);
             }
         }
-    }
+	}
 
     public bool TryGet(long useId, ref Timer timer)
     {
